@@ -1,0 +1,13 @@
+[Unit]
+Description=Start Osmocom Services
+After=network.target
+
+[Service]
+ExecStart=/home/comsec/GSM-LimeSDR-Osmocom/scripts/control_osmocom_services.sh start
+WorkingDirectory=/home/comsec/GSM-LimeSDR-Osmocom/scripts/
+User=root
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target
+
